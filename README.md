@@ -1,6 +1,6 @@
 # Student
 
-
+https://www.geeksforgeeks.org/basic-crud-create-read-update-delete-in-asp-net-mvc-using-c-sharp-and-entity-framework/
 
 ## Getting started
 
