@@ -1,20 +1,19 @@
+image: mcr.microsoft.com/dotnet/sdk:7.0
+
+stages:
+  - build
+  - test
+
 build:
   stage: build
   script:
     - dotnet restore
-    - dotnet build
+    - dotnet build --configuration Release
+  artifacts:
+    paths:
+      - ./bin/Release/net7.0/publish/
+
 test:
   stage: test
   script:
     - dotnet test
-
-stages:
-  - publish
-
-publish:
-  stage: publish
-  script:
-    - dotnet publish -c release --no-restore
-  artifacts:
-    paths:
-      - D:\4-Raksmey\LOL\published
